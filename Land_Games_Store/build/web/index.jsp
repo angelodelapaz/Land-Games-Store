@@ -9,54 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="indexstyles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+            rel="stylesheet"
+            />
         <title>LAND Games Store</title>
         <style>
-            header {
-                width: 100%;
-                height: 50px;
-                background-color: #32a660;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                position: fixed;
-                top: 0;
-                margin-left: -10px;
-            }
-
-            h1 {
-                font-size: min(5vw, 1.2em);
-                text-align: center;
-                padding: 0.2rem;
-                margin: 0 10px 0.2rem;
-                color: black;
-            }
-
-            a {
-                text-decoration: none;
-            }
-
-            .logout {
-                color: black;
-                font-size: min(4vw, 1em);
-                text-align: center;
-                padding: 0.2rem;
-                margin: 0 0.2rem;
-            }
-
-            .logout:hover {
-                background-color: #dfdfe2;
-                color: #1b1b32;
-                cursor: pointer;
-            }
-
-            .links{
-                display: flex;
-                flex-wrap: nowrap;
-            }
-
-            body{
-                background-color: #52422d;
-            }
 
             main {
                 margin-top: 60px;
@@ -107,7 +68,7 @@
             form {
                 margin-left: 35px;
             }
-            
+
             .counter {
                 margin-left: 20px;
                 max-width: 30px;
