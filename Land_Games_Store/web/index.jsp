@@ -125,7 +125,7 @@
             <section> <!--Try gawing setSession nalnag yung mga form-->
                 <div class="content">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Overwatch</p>
+                    <p>Lex</p>
                     <hr class="line">
                     <form action="">
                         <button>Add to Cart</button>
