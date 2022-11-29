@@ -17,66 +17,9 @@
             rel="stylesheet"
             />
         <title>LAND Games Store</title>
-        <style>
-
-            main {
-                margin-top: 60px;
-                max-width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            section {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                flex-wrap: nowrap;
-            }
-
-            .content {
-                max-width: 150px;
-                border: 1px solid white;
-                padding: 5px;
-            }
-
-            img {
-                height: 190px;
-                width: 140px;
-            }
-
-            h4, p{
-                color: white;
-            }
-
-            p {
-                margin-top: -5px;
-                text-align: center;
-            }
-
-            hr {
-                margin-top: 5px;
-                height: 1px;
-                background-color: #ffffff;
-                border-color: #ffffff;
-            }
-
-            .line{
-                margin-top: -10px;
-                width: 90%;
-            }
-
-            form {
-                margin-left: 35px;
-            }
-
-            .counter {
-                margin-left: 20px;
-                max-width: 30px;
-            }
-        </style>
     </head>
     <body>
-        <header>
+        <header class="navbar">
             <div>
                 <h1>LAND GAMES STORE</h1>
             </div>
