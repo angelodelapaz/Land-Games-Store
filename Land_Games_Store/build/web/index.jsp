@@ -107,6 +107,11 @@
             form {
                 margin-left: 35px;
             }
+            
+            .counter {
+                margin-left: 20px;
+                max-width: 30px;
+            }
         </style>
     </head>
     <body>
@@ -125,9 +130,10 @@
             <section> <!--Try gawing setSession nalnag yung mga form-->
                 <div class="content">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Gelo</p>
+                    <p>Overwatch</p>
                     <hr class="line">
                     <form action="">
+                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -136,6 +142,7 @@
                     <p>Overwatch</p>
                     <hr class="line">
                     <form action="">
+                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -144,6 +151,7 @@
                     <p>Overwatch</p>
                     <hr class="line">
                     <form action="">
+                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -152,6 +160,7 @@
                     <p>Overwatch</p>
                     <hr class="line">
                     <form action="">
+                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -160,17 +169,10 @@
                     <p>Overwatch</p>
                     <hr class="line">
                     <form action="">
+                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
                         <button>Add to Cart</button>
                     </form>
-                </div>
-                <div class="content">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Overwatch</p>
-                    <hr class="line">
-                    <form action=""> 
-                        <button>Add to Cart</button>
-                    </form>
-                </div>
+                </div>                
             </section>
             <h4>New Releases</h4>
             <hr>
@@ -180,6 +182,7 @@
                     <p>Overwatch</p>
                     <hr class="line">
                     <form action="">
+                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -188,6 +191,7 @@
                     <p>Overwatch</p>
                     <hr class="line">
                     <form action="">
+                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -196,6 +200,7 @@
                     <p>Overwatch</p>
                     <hr class="line">
                     <form action="">
+                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -204,6 +209,7 @@
                     <p>Overwatch</p>
                     <hr class="line">
                     <form action="">
+                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -212,14 +218,7 @@
                     <p>Overwatch</p>
                     <hr class="line">
                     <form action="">
-                        <button>Add to Cart</button>
-                    </form>
-                </div>
-                <div class="content">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Overwatch</p>
-                    <hr class="line">
-                    <form action=""> 
+                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
                         <button>Add to Cart</button>
                     </form>
                 </div>
