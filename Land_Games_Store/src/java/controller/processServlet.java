@@ -44,7 +44,16 @@ public class processServlet extends HttpServlet {
         if(cartSession == null)
             session.setAttribute("cartSession", cart);
         else{
-            cartSession.addAll(cart);
+            if(cartSession.contains(content))
+            {
+                int index = cartSession.indexOf(content);
+                String temp = (String)cartSession.get(index + 1);
+                int amount = Integer.parseInt(temp);
+                amount = amount + Integer.parseInt(quantity);
+                cartSession.set(index + 1, amount);
+            }
+            else
+                cartSession.addAll(cart);
         }
         
         response.sendRedirect("index.jsp");
