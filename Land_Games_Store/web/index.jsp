@@ -25,7 +25,7 @@
             </div>
             <div class="links">
                 <a href="" class="logout">Login/SignUp</a>
-                <a href="" class="logout">MyCart</a>
+                <a href="cart.jsp" class="logout">MyCart</a>
             </div>
         </header>
         <main>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="content">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Overwatch</p>
+                    <p>Valorant</p>
                     <hr class="line">
                     <form action="process">
                         <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>

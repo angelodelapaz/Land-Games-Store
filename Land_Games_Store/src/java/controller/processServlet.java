@@ -50,7 +50,7 @@ public class processServlet extends HttpServlet {
                 String temp = (String)cartSession.get(index + 1);
                 int amount = Integer.parseInt(temp);
                 amount = amount + Integer.parseInt(quantity);
-                cartSession.set(index + 1, amount);
+                cartSession.set(index + 1, Integer.toString(amount));
             }
             else
                 cartSession.addAll(cart);
