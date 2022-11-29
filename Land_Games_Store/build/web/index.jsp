@@ -27,7 +27,7 @@
                 font-size: min(5vw, 1.2em);
                 text-align: center;
                 padding: 0.2rem;
-                margin: 0 11px 0.2rem;
+                margin: 0 10px 0.2rem;
                 color: black;
             }
 
