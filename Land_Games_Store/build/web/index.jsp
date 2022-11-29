@@ -132,8 +132,9 @@
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
                     <p>Overwatch</p>
                     <hr class="line">
-                    <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
+                    <form action="process">
+                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
+                        <input type="hidden" name="content" value="Overwatch">
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -141,8 +142,9 @@
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
                     <p>Overwatch</p>
                     <hr class="line">
-                    <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
+                    <form action="process">
+                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
+                        <input type="hidden" name="content" value="Valorant">
                         <button>Add to Cart</button>
                     </form>
                 </div>
