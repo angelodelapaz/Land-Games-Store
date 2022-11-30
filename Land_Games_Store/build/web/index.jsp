@@ -33,8 +33,10 @@
             <hr>
             <section> <!--Try gawing setSession nalnag yung mga form-->
                 <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("popular_one_img")); %>" alt="Overwatch">
+                    <img src="<% out.print(getServletContext().getInitParameter("popular_one_img")); %>" 
+                         alt="<% out.print(getServletContext().getInitParameter("popular_one_name")); %>">
                     <p><% out.print(getServletContext().getInitParameter("popular_one_name")); %></p>
+                    <p>$<% out.print(getServletContext().getInitParameter("popular_one_price")); %></p>
                     <hr class="line">
                     <form action="process">
                         <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
@@ -43,8 +45,10 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("popular_two_img")); %>" alt="Overwatch">
+                    <img src="<% out.print(getServletContext().getInitParameter("popular_two_img")); %>" 
+                         alt="<% out.print(getServletContext().getInitParameter("popular_two_name")); %>">
                     <p><% out.print(getServletContext().getInitParameter("popular_two_name")); %></p>
+                    <p>$<% out.print(getServletContext().getInitParameter("popular_two_price")); %></p>
                     <hr class="line">
                     <form action="process">
                         <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
@@ -53,8 +57,10 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("popular_three_img")); %>" alt="Overwatch">
+                    <img src="<% out.print(getServletContext().getInitParameter("popular_three_img")); %>" 
+                         alt="<% out.print(getServletContext().getInitParameter("popular_three_name")); %>">
                     <p><% out.print(getServletContext().getInitParameter("popular_three_name")); %></p>
+                    <p>$<% out.print(getServletContext().getInitParameter("popular_three_price")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -62,8 +68,10 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("popular_four_img")); %>" alt="Overwatch">
+                    <img src="<% out.print(getServletContext().getInitParameter("popular_four_img")); %>" 
+                         alt="<% out.print(getServletContext().getInitParameter("popular_four_name")); %>">
                     <p><% out.print(getServletContext().getInitParameter("popular_four_name")); %></p>
+                    <p>$<% out.print(getServletContext().getInitParameter("popular_four_price")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -71,8 +79,10 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("popular_five_img")); %>" alt="Overwatch">
+                    <img src="<% out.print(getServletContext().getInitParameter("popular_five_img")); %>" 
+                         alt=""<% out.print(getServletContext().getInitParameter("popular_five_name")); %>">
                     <p><% out.print(getServletContext().getInitParameter("popular_five_name")); %></p>
+                    <p>$<% out.print(getServletContext().getInitParameter("popular_five_price")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -84,8 +94,10 @@
             <hr>
             <section> <!--Try gawing setSession nalnag yung mga form-->
                 <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("new_one_img")); %>" alt="Overwatch">
+                    <img src="<% out.print(getServletContext().getInitParameter("new_one_img")); %>" 
+                         alt="<% out.print(getServletContext().getInitParameter("new_one_name")); %>>">
                     <p><% out.print(getServletContext().getInitParameter("new_one_name")); %></p>
+                    <p>$<% out.print(getServletContext().getInitParameter("new_one_price")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -93,8 +105,10 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("new_two_img")); %>" alt="Overwatch">
+                    <img src="<% out.print(getServletContext().getInitParameter("new_two_img")); %>" 
+                         alt="<% out.print(getServletContext().getInitParameter("new_two_name")); %>">
                     <p><% out.print(getServletContext().getInitParameter("new_two_name")); %></p>
+                    <p>$<% out.print(getServletContext().getInitParameter("new_two_price")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -102,8 +116,10 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("new_three_img")); %>" alt="Overwatch">
+                    <img src="<% out.print(getServletContext().getInitParameter("new_three_img")); %>" 
+                         alt="<% out.print(getServletContext().getInitParameter("new_three_name")); %>">
                     <p><% out.print(getServletContext().getInitParameter("new_three_name")); %></p>
+                    <p>$<% out.print(getServletContext().getInitParameter("new_three_price")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -111,8 +127,10 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("new_four_img")); %>" alt="Overwatch">
+                    <img src="<% out.print(getServletContext().getInitParameter("new_four_img")); %>" 
+                         alt="<% out.print(getServletContext().getInitParameter("new_four_name")); %>">
                     <p><% out.print(getServletContext().getInitParameter("new_four_name")); %></p>
+                    <p>$<% out.print(getServletContext().getInitParameter("new_four_price")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -120,8 +138,10 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("new_five_img")); %>" alt="Overwatch">
+                    <img src="<% out.print(getServletContext().getInitParameter("new_five_img")); %>"
+                         alt="<% out.print(getServletContext().getInitParameter("new_five_name")); %>">
                     <p><% out.print(getServletContext().getInitParameter("new_five_name")); %></p>
+                    <p>$<% out.print(getServletContext().getInitParameter("new_five_price")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
