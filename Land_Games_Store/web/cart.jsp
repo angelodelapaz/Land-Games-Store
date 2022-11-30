@@ -153,7 +153,7 @@
     <body>
         <header>
             <div>
-                <h1>LAND GAMES STORE</h1>
+                <a href="index.jsp" class="logout"><h1>LAND GAMES STORE</h1></a>
             </div>
             <div class="links">
                 <a href="" class="logout">Login/SignUp</a>
