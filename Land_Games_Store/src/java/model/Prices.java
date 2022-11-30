@@ -30,7 +30,7 @@ public class Prices {
     
     public void imageSetter()
     {
-        image.put("Overwatch", "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg");
+        image.put("Overwatch", "https://assets-prd.ignimgs.com/2022/06/23/overwatch-2-button-fin-1656022954568.jpg");
         image.put("Valorant", "https://m.media-amazon.com/images/M/MV5BNmNhM2NjMTgtNmIyZC00ZmVjLTk4YWItZmZjNGY2NThiNDhkXkEyXkFqcGdeQXVyODU4MDU1NjU@._V1_.jpg");
     }
     

@@ -25,7 +25,7 @@
     </context-param>
     <context-param>
         <param-name>popular_one_img</param-name>
-        <param-value>https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg</param-value>
+        <param-value>https://assets-prd.ignimgs.com/2022/06/23/overwatch-2-button-fin-1656022954568.jpg</param-value>
     </context-param>
     <context-param>
         <param-name>popular_two_name</param-name>
