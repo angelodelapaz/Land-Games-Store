@@ -138,6 +138,16 @@
                 text-align: right;
                 width: 25%;
             }
+            
+            .total-item{
+                width:inherit;
+                margin-left: 25%;
+                margin-right: 25%;
+            }
+            
+            #total-item-price{
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
@@ -179,7 +189,10 @@
                                                 "<div class=\"info\">" +
                                                     "<p>" + content + "</p>" +
                                                     "<p>"+ (String)cartSession.get(i) + "pcs</p>" +
-                                                    "<p>$" + price.get(content) + "</p>" +
+                                                    "<p>$" + price.get(content) + " per piece</p>" +
+                                                "</div>" +
+                                                "<div class=\"total-item\">" +
+                                                    "<p class=\"right-title\">$" + (Integer.parseInt((String)cartSession.get(i)) * price.get(content)) + "</p>" +
                                                 "</div>" +
                                             "</div>");
                                 sum = sum + (Integer.parseInt((String)cartSession.get(i)) * price.get(content));
