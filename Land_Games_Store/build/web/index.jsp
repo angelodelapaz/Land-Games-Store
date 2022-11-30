@@ -43,7 +43,7 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNmNhM2NjMTgtNmIyZC00ZmVjLTk4YWItZmZjNGY2NThiNDhkXkEyXkFqcGdeQXVyODU4MDU1NjU@._V1_.jpg" alt="Overwatch">
                     <p>Valorant</p>
                     <hr class="line">
                     <form action="process">
