@@ -33,8 +33,8 @@
             <hr>
             <section> <!--Try gawing setSession nalnag yung mga form-->
                 <div class="content">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Overwatch</p>
+                    <img src="<% out.print(getServletContext().getInitParameter("popular_one_img")); %>" alt="Overwatch">
+                    <p><% out.print(getServletContext().getInitParameter("popular_one_name")); %></p>
                     <hr class="line">
                     <form action="process">
                         <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
@@ -43,8 +43,8 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNmNhM2NjMTgtNmIyZC00ZmVjLTk4YWItZmZjNGY2NThiNDhkXkEyXkFqcGdeQXVyODU4MDU1NjU@._V1_.jpg" alt="Overwatch">
-                    <p>Valorant</p>
+                    <img src="<% out.print(getServletContext().getInitParameter("popular_two_img")); %>" alt="Overwatch">
+                    <p><% out.print(getServletContext().getInitParameter("popular_two_name")); %></p>
                     <hr class="line">
                     <form action="process">
                         <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
@@ -53,8 +53,8 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Overwatch</p>
+                    <img src="<% out.print(getServletContext().getInitParameter("popular_three_img")); %>" alt="Overwatch">
+                    <p><% out.print(getServletContext().getInitParameter("popular_three_name")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -62,8 +62,8 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Overwatch</p>
+                    <img src="<% out.print(getServletContext().getInitParameter("popular_four_img")); %>" alt="Overwatch">
+                    <p><% out.print(getServletContext().getInitParameter("popular_four_name")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -71,8 +71,8 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Overwatch</p>
+                    <img src="<% out.print(getServletContext().getInitParameter("popular_five_img")); %>" alt="Overwatch">
+                    <p><% out.print(getServletContext().getInitParameter("popular_five_name")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -84,8 +84,8 @@
             <hr>
             <section> <!--Try gawing setSession nalnag yung mga form-->
                 <div class="content">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Overwatch</p>
+                    <img src="<% out.print(getServletContext().getInitParameter("new_one_img")); %>" alt="Overwatch">
+                    <p><% out.print(getServletContext().getInitParameter("new_one_name")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -93,8 +93,8 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Overwatch</p>
+                    <img src="<% out.print(getServletContext().getInitParameter("new_two_img")); %>" alt="Overwatch">
+                    <p><% out.print(getServletContext().getInitParameter("new_two_name")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -102,8 +102,8 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Overwatch</p>
+                    <img src="<% out.print(getServletContext().getInitParameter("new_three_img")); %>" alt="Overwatch">
+                    <p><% out.print(getServletContext().getInitParameter("new_three_name")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -111,8 +111,8 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Overwatch</p>
+                    <img src="<% out.print(getServletContext().getInitParameter("new_four_img")); %>" alt="Overwatch">
+                    <p><% out.print(getServletContext().getInitParameter("new_four_name")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
@@ -120,8 +120,8 @@
                     </form>
                 </div>
                 <div class="content">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg" alt="Overwatch">
-                    <p>Overwatch</p>
+                    <img src="<% out.print(getServletContext().getInitParameter("new_five_img")); %>" alt="Overwatch">
+                    <p><% out.print(getServletContext().getInitParameter("new_five_name")); %></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
