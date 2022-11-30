@@ -138,7 +138,7 @@
     </context-param>
     <context-param>
         <param-name>new_five_price</param-name>
-        <param-value>300</param-value>
+        <param-value>500</param-value>
     </context-param>
     
     <error-page>
