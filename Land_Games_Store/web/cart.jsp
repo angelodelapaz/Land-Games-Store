@@ -4,8 +4,10 @@
     Author     : Lex Zedrick Lorenzo
 --%>
 
+<%@page import="java.util.Map"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.ArrayList;"%>
+<%@page import="model.Prices;"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -156,7 +158,12 @@
                     <%
                         session = request.getSession();
                         ArrayList cartSession = (ArrayList)session.getAttribute("cartSession");
+                        Prices pr = new Prices();
+                        pr.setter();
+                        Map<String, Integer> price = pr.priceGetter();
+                        Map<String, String> image = pr.imageGetter();
                         String content = "";
+                        int sum = 0;
                         for(int i = 0; i < cartSession.size(); i++)
                         {
                             if( i % 2 == 0)
@@ -167,14 +174,15 @@
                             {
                                 out.println("<div class=\"content\">" +
                                                 "<div class=\"image\">" +
-                                                     "<img src=\"https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg\" alt=\"Overwatch\">" +
+                                                     "<img src=\"" + image.get(content) + "\" alt=\"Overwatch\">" +
                                                 "</div>" +
                                                 "<div class=\"info\">" +
                                                     "<p>" + content + "</p>" +
                                                     "<p>"+ (String)cartSession.get(i) + "pcs</p>" +
-                                                    "<p>$100</p>" +
+                                                    "<p>$" + price.get(content) + "</p>" +
                                                 "</div>" +
                                             "</div>");
+                                sum = sum + (Integer.parseInt((String)cartSession.get(i)) * price.get(content));
                             }
                             
                         }
@@ -182,10 +190,10 @@
                 </div>
                 <div class="right">
                     <h3>Games and Apps Summary</h3>
-                    <p class="left-title">Price</p><p class="right-title">$1000</p>
+                    <p class="left-title">Price</p><p class="right-title">$<%out.print(sum);%></p>
                     <p class="left-title">Taxes</p><p class="right-title">Calculated at checkout</p>
                     <hr class="line">
-                    <p class="left-title">Subtotal</p><p class="right-title">$1000</p>
+                    <p class="left-title">Subtotal</p><p class="right-title">$<%out.print(sum);%></p>
                 </div>
             </div>
         </main>
