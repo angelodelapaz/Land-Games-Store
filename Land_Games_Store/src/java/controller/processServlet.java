@@ -43,30 +43,37 @@ public class processServlet extends HttpServlet {
             response.sendRedirect("adderror.jsp");
         } else {
             logIn = true;
+        }
+
+        if (logIn == true) {
             String quantity = request.getParameter("quantity");
             String content = request.getParameter("content");
             Storing st = new Storing();
-            st.setter(content, quantity);
-            List<String> cart = st.getter();
-            ArrayList cartSession = (ArrayList) session.getAttribute("cartSession");
 
-            if (cartSession == null) {
-                session.setAttribute("cartSession", cart);
-            } else {
-                if (cartSession.contains(content)) {
-                    int index = cartSession.indexOf(content);
-                    String temp = (String) cartSession.get(index + 1);
-                    int amount = Integer.parseInt(temp);
-                    amount = amount + Integer.parseInt(quantity);
-                    cartSession.set(index + 1, Integer.toString(amount));
+            if (quantity != "") {
+                st.setter(content, quantity);
+                List<String> cart = st.getter();
+                ArrayList cartSession = (ArrayList) session.getAttribute("cartSession");
+
+                if (cartSession == null) {
+                    session.setAttribute("cartSession", cart);
                 } else {
-                    cartSession.addAll(cart);
-                }
-            }
+                    if (cartSession.contains(content)) {
+                        int index = cartSession.indexOf(content);
+                        String temp = (String) cartSession.get(index + 1);
 
+                        int amount = Integer.parseInt(temp);
+                        amount = amount + Integer.parseInt(quantity);
+                        cartSession.set(index + 1, Integer.toString(amount));
+
+                    } else {
+                        cartSession.addAll(cart);
+                    }
+                }
+                System.out.print(cartSession + "handsome");
+            }
             response.sendRedirect("index.jsp");
 
-            System.out.print(cartSession + "handsome");
         }
     }
 
