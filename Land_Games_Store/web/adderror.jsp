@@ -36,7 +36,7 @@
         %>
         <header class="navbar">
             <div>
-                <h1>LAND GAMES STORE</h1>
+                <a href="index.jsp" class="logout"><h1>LAND GAMES STORE</h1></a>
             </div>
             <div class="links">
                 <%
