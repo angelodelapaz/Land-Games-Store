@@ -32,20 +32,15 @@
                 logIn = false;
             } else {
                 logIn = true;
+                response.sendRedirect("index.jsp");
             }
         %>
         <header class="navbar">
             <div>
-                <h1>LAND GAMES STORE</h1>
+                <a href="index.jsp" class="logout"><h1>LAND GAMES STORE</h1></a>
             </div>
             <div class="links">
-                <%
-                    if (logIn == true) {
-                        out.print("<a href=\"LogoutServlet\" class=\"logout\">Logout</a>");
-                    } else {
-                        out.print("<a href=\"login.jsp\" class=\"logout\">Login/SignUp</a>");
-                    }
-                %>
+                <a href="login.jsp" class="logout">Login/SignUp</a>
                 <a href="cart.jsp" class="logout">MyCart</a>
             </div>
         </header>
