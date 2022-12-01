@@ -163,76 +163,70 @@
                 response.sendRedirect("adderror.jsp");
             } else {
                 logIn = true;
-                out.print("<header>"
-                        + "<div>"
-                        + "<a href=\"index.jsp\" class=\"logout\"><h1>LAND GAMES STORE</h1></a>"
-                        + "</div>"
-                        + "<div class=\"links\">");
-                if (logIn == true) {
-                    out.print("<a href=\"LogoutServlet\" class=\"logout\">Logout</a>");
-                } else {
-                    out.print("<a href=\"login.jsp\" class=\"logout\">Login/SignUp</a>");
-                }
-
-                out.print("<a href=\"\" class=\"logout\">MyCart</a>"
-                        + "</div>"
-                        + "</header>"
-                        + "<main>"
-                        + "<h2>My Cart</h2>"
-                        + "<hr>"
-                        + "<div class=\"container\">"
-                        + "<div class=\"left\">");
-
-                session = request.getSession();
-                ArrayList cartSession = (ArrayList) session.getAttribute("cartSession");
-                int sum = 0;
-                if(cartSession == null)
-                    response.sendRedirect("COerror.jsp");
-                else
-                {
-                    Map<String, String> image = (Map) getServletContext().getAttribute("image");
-                    Map<String, Integer> price = (Map) getServletContext().getAttribute("price");
-                    String content = "";
-                    
-                    for (int i = 0; i < cartSession.size(); i++) 
-                    {
-                        if (i % 2 == 0) {
-                            content = (String) cartSession.get(i);
-                        } 
-                        else 
-                        {
-                            out.println("<div class=\"content\">"
-                                    + "<div class=\"image\">"
-                                    + "<img src=\"" + image.get(content) + "\" alt=\"Overwatch\">"
-                                    + "</div>"
-                                    + "<div class=\"info\">"
-                                    + "<p>" + content + "</p>"
-                                    + "<p>" + (String) cartSession.get(i) + "pcs</p>"
-                                    + "<p>$" + price.get(content) + " per piece</p>"
-                                    + "</div>"
-                                    + "<div class=\"total-item\">"
-                                    + "<p class=\"right-title\">$" + (Integer.parseInt((String) cartSession.get(i)) * price.get(content)) + "</p>"
-                                    + "</div>"
-                                    + "</div>");
-                            sum = sum + (Integer.parseInt((String) cartSession.get(i)) * price.get(content));
-                        }
-                    }
-                }
-
-                out.print("</div>"
-                        + "<div class=\"right\">"
-                        + "<h3>Games and Apps Summary</h3>"
-                        + "<p class=\"left-title\">Price</p><p class=\"right-title\">$"
-                        + sum + "</p>"
-                        + "<p class=\"left-title\">Taxes</p><p class=\"right-title\">Calculated at checkout</p>"
-                        + "<hr class=\"line\">"
-                        + "<p class=\"left-title\">Subtotal</p><p class=\"right-title\">$"
-                        + sum + "</p>"
-                        + "</div>"
-                        + "</div>"
-                        + "</main>"
-                        + "</body>"
-                        + "</html>");
-
             }
         %>
+        <header>
+            <div>
+                <a href="index.jsp" class="logout"><h1>LAND GAMES STORE</h1></a>
+            </div>
+            <div class="links">
+                <%
+                    if (logIn == true) {
+                        out.print("<a href=\"LogoutServlet\" class=\"logout\">Logout</a>");
+                    } else {
+                        out.print("<a href=\"login.jsp\" class=\"logout\">Login/SignUp</a>");
+                    }
+                %>
+                <a href="" class="logout">MyCart</a>
+            </div>
+        </header>
+        <main>
+            <h2>My Cart</h2>
+            <hr>
+            <div class="container">
+                <div class="left">
+                    <%
+                        int sum = 0;
+                        if (logIn == true) {
+                            session = request.getSession();
+                            ArrayList cartSession = (ArrayList) session.getAttribute("cartSession");
+                            Map<String, String> image = (Map) getServletContext().getAttribute("image");
+                            Map<String, Integer> price = (Map) getServletContext().getAttribute("price");
+                            String content = "";
+                            
+                            for (int i = 0; i < cartSession.size(); i++) {
+                                if (i % 2 == 0) {
+                                    content = (String) cartSession.get(i);
+                                } else {
+                                    out.println("<div class=\"content\">"
+                                            + "<div class=\"image\">"
+                                            + "<img src=\"" + image.get(content) + "\" alt=\"Overwatch\">"
+                                            + "</div>"
+                                            + "<div class=\"info\">"
+                                            + "<p>" + content + "</p>"
+                                            + "<p>" + (String) cartSession.get(i) + "pcs</p>"
+                                            + "<p>$" + price.get(content) + " per piece</p>"
+                                            + "</div>"
+                                            + "<div class=\"total-item\">"
+                                            + "<p class=\"right-title\">$" + (Integer.parseInt((String) cartSession.get(i)) * price.get(content)) + "</p>"
+                                            + "</div>"
+                                            + "</div>");
+                                    sum = sum + (Integer.parseInt((String) cartSession.get(i)) * price.get(content));
+                                }
+
+                            }
+                        }
+
+                    %>
+                </div>
+                <div class="right">
+                    <h3>Games and Apps Summary</h3>
+                    <p class="left-title">Price</p><p class="right-title">$<%out.print(sum);%></p>
+                    <p class="left-title">Taxes</p><p class="right-title">Calculated at checkout</p>
+                    <hr class="line">
+                    <p class="left-title">Subtotal</p><p class="right-title">$<%out.print(sum);%></p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
