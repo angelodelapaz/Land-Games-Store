@@ -50,6 +50,9 @@ public class processServlet extends HttpServlet {
             String content = request.getParameter("content");
             Storing st = new Storing();
 
+            if(quantity == ""){
+                response.sendError(500);
+            }
             if (quantity != "") {
                 st.setter(content, quantity);
                 List<String> cart = st.getter();
@@ -70,10 +73,9 @@ public class processServlet extends HttpServlet {
                         cartSession.addAll(cart);
                     }
                 }
+                response.sendRedirect("index.jsp");
                 System.out.print(cartSession + "handsome");
             }
-            response.sendRedirect("index.jsp");
-
         }
     }
 
