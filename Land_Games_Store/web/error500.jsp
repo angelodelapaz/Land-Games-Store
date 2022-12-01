@@ -36,7 +36,7 @@
         %>
         <header class="navbar">
             <div>
-                <h1>LAND GAMES STORE</h1>
+                <a href="index.jsp" class="logout"><h1>LAND GAMES STORE</h1></a>
             </div>
             <div class="links">
                 <%
@@ -54,7 +54,7 @@
     <main>
         <h1>500 :((</h1>
         <h2>Server Error</h2>
-        <h3>The server encountered an internal error and could not complete our request</h3>
+        <h3>The server encountered an internal error and could not complete your request</h3>
     </main>
   </body>
 </html>
