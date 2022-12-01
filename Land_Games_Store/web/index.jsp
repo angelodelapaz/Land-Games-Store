@@ -53,130 +53,46 @@
             <h4>Most popular</h4>
             <hr>
             <section> <!--Try gawing setSession nalnag yung mga form-->
-                <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("popular_one_img")); %>" 
-                         alt="<% out.print(getServletContext().getInitParameter("popular_one_name")); %>">
-                    <p><% out.print(getServletContext().getInitParameter("popular_one_name")); %></p>
-                    <p>$<% out.print(getServletContext().getInitParameter("popular_one_price")); %></p>
-                    <hr class="line">
-                    <form action="process">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
-                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("popular_one_name")); %>">
-                        <button>Add to Cart</button>
-                    </form>
-                </div>
-                <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("popular_two_img")); %>" 
-                         alt="<% out.print(getServletContext().getInitParameter("popular_two_name")); %>">
-                    <p><% out.print(getServletContext().getInitParameter("popular_two_name")); %></p>
-                    <p>$<% out.print(getServletContext().getInitParameter("popular_two_price")); %></p>
-                    <hr class="line">
-                    <form action="process">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
-                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("popular_two_name")); %>">
-                        <button>Add to Cart</button>
-                    </form>
-                </div>
-                <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("popular_three_img")); %>" 
-                         alt="<% out.print(getServletContext().getInitParameter("popular_three_name")); %>">
-                    <p><% out.print(getServletContext().getInitParameter("popular_three_name")); %></p>
-                    <p>$<% out.print(getServletContext().getInitParameter("popular_three_price")); %></p>
-                    <hr class="line">
-                    <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
-                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("popular_three_name")); %>">
-                        <button>Add to Cart</button>
-                    </form>
-                </div>
-                <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("popular_four_img")); %>" 
-                         alt="<% out.print(getServletContext().getInitParameter("popular_four_name")); %>">
-                    <p><% out.print(getServletContext().getInitParameter("popular_four_name")); %></p>
-                    <p>$<% out.print(getServletContext().getInitParameter("popular_four_price")); %></p>
-                    <hr class="line">
-                    <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
-                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("popular_four_name")); %>">
-                        <button>Add to Cart</button>
-                    </form>
-                </div>
-                <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("popular_five_img")); %>" 
-                         alt="<% out.print(getServletContext().getInitParameter("popular_five_name")); %>">
-                    <p><% out.print(getServletContext().getInitParameter("popular_five_name")); %></p>
-                    <p>$<% out.print(getServletContext().getInitParameter("popular_five_price")); %></p>
-                    <hr class="line">
-                    <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
-                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("popular_five_name")); %>">
-                        <button>Add to Cart</button>
-                    </form>
-                </div>                
+                
+                <%
+                    for(int i = 1; i < 6; i++)
+                    {
+                        out.print("<div class=\"content\">" +
+                                        "<img src=\"" + getServletContext().getInitParameter("popular_" + i + "_img") + "\"" +
+                                                "alt=\"" + getServletContext().getInitParameter("popular_" + i + "_name") + "\">" +
+                                        "<p>" + getServletContext().getInitParameter("popular_" + i + "_name") + "</p>" +
+                                        "<p>$" + getServletContext().getInitParameter("popular_" + i + "_price") + "</p>" +
+                                        "<hr class=\"line\">" +
+                                        "<form action=\"process\">" +
+                                            "<input type=\"number\" min=\"0\" step=\"1\" class=\"counter\" placeholder=\"0\" name=\"quantity\"/>" +
+                                            "<input type=\"hidden\" name=\"content\" value=\"" + getServletContext().getInitParameter("popular_" + i + "_name") + "\">" +
+                                            "<button>Add to Cart</button>" +
+                                        "</form>" +
+                                    "</div>");
+                    }
+                %>
             </section>
             <h4>New Releases</h4>
             <hr>
             <section> <!--Try gawing setSession nalnag yung mga form-->
-                <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("new_one_img")); %>" 
-                         alt="<% out.print(getServletContext().getInitParameter("new_one_name")); %>>">
-                    <p><% out.print(getServletContext().getInitParameter("new_one_name")); %></p>
-                    <p>$<% out.print(getServletContext().getInitParameter("new_one_price")); %></p>
-                    <hr class="line">
-                    <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
-                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("new_one_name")); %>">
-                        <button>Add to Cart</button>
-                    </form>
-                </div>
-                <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("new_two_img")); %>" 
-                         alt="<% out.print(getServletContext().getInitParameter("new_two_name")); %>">
-                    <p><% out.print(getServletContext().getInitParameter("new_two_name")); %></p>
-                    <p>$<% out.print(getServletContext().getInitParameter("new_two_price")); %></p>
-                    <hr class="line">
-                    <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
-                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("new_two_name")); %>">
-                        <button>Add to Cart</button>
-                    </form>
-                </div>
-                <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("new_three_img")); %>" 
-                         alt="<% out.print(getServletContext().getInitParameter("new_three_name")); %>">
-                    <p><% out.print(getServletContext().getInitParameter("new_three_name")); %></p>
-                    <p>$<% out.print(getServletContext().getInitParameter("new_three_price")); %></p>
-                    <hr class="line">
-                    <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
-                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("new_three_name")); %>">
-                        <button>Add to Cart</button>
-                    </form>
-                </div>
-                <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("new_four_img")); %>" 
-                         alt="<% out.print(getServletContext().getInitParameter("new_four_name")); %>">
-                    <p><% out.print(getServletContext().getInitParameter("new_four_name")); %></p>
-                    <p>$<% out.print(getServletContext().getInitParameter("new_four_price")); %></p>
-                    <hr class="line">
-                    <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
-                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("new_four_name")); %>">
-                        <button>Add to Cart</button>
-                    </form>
-                </div>
-                <div class="content">
-                    <img src="<% out.print(getServletContext().getInitParameter("new_five_img")); %>"
-                         alt="<% out.print(getServletContext().getInitParameter("new_five_name")); %>">
-                    <p><% out.print(getServletContext().getInitParameter("new_five_name")); %></p>
-                    <p>$<% out.print(getServletContext().getInitParameter("new_five_price"));%></p>
-                    <hr class="line">
-                    <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
-                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("new_five_name")); %>">
-                        <button>Add to Cart</button>
-                    </form>
-                </div>
+                
+                <%
+                    for(int i = 1; i < 6; i++)
+                    {
+                        out.print("<div class=\"content\">" +
+                                        "<img src=\"" + getServletContext().getInitParameter("new_" + i + "_img") + "\"" +
+                                                "alt=\"" + getServletContext().getInitParameter("new_" + i + "_name") + "\">" +
+                                        "<p>" + getServletContext().getInitParameter("new_" + i + "_name") + "</p>" +
+                                        "<p>$" + getServletContext().getInitParameter("new_" + i + "_price") + "</p>" +
+                                        "<hr class=\"line\">" +
+                                        "<form action=\"process\">" +
+                                            "<input type=\"number\" min=\"0\" step=\"1\" class=\"counter\" placeholder=\"0\" name=\"quantity\"/>" +
+                                            "<input type=\"hidden\" name=\"content\" value=\"" + getServletContext().getInitParameter("new_" + i + "_name") + "\">" +
+                                            "<button>Add to Cart</button>" +
+                                        "</form>" +
+                                    "</div>");
+                    }
+                %>
             </section>
         </main>
     </body>
