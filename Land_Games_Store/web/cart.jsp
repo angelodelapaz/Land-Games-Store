@@ -185,28 +185,37 @@
 
                 session = request.getSession();
                 ArrayList cartSession = (ArrayList) session.getAttribute("cartSession");
-                Map<String, String> image = (Map) getServletContext().getAttribute("image");
-                Map<String, Integer> price = (Map) getServletContext().getAttribute("price");
-                String content = "";
                 int sum = 0;
-                for (int i = 0; i < cartSession.size(); i++) {
-                    if (i % 2 == 0) {
-                        content = (String) cartSession.get(i);
-                    } else {
-                        out.println("<div class=\"content\">"
-                                + "<div class=\"image\">"
-                                + "<img src=\"" + image.get(content) + "\" alt=\"Overwatch\">"
-                                + "</div>"
-                                + "<div class=\"info\">"
-                                + "<p>" + content + "</p>"
-                                + "<p>" + (String) cartSession.get(i) + "pcs</p>"
-                                + "<p>$" + price.get(content) + " per piece</p>"
-                                + "</div>"
-                                + "<div class=\"total-item\">"
-                                + "<p class=\"right-title\">$" + (Integer.parseInt((String) cartSession.get(i)) * price.get(content)) + "</p>"
-                                + "</div>"
-                                + "</div>");
-                        sum = sum + (Integer.parseInt((String) cartSession.get(i)) * price.get(content));
+                if(cartSession == null)
+                    response.sendRedirect("COerror.jsp");
+                else
+                {
+                    Map<String, String> image = (Map) getServletContext().getAttribute("image");
+                    Map<String, Integer> price = (Map) getServletContext().getAttribute("price");
+                    String content = "";
+                    
+                    for (int i = 0; i < cartSession.size(); i++) 
+                    {
+                        if (i % 2 == 0) {
+                            content = (String) cartSession.get(i);
+                        } 
+                        else 
+                        {
+                            out.println("<div class=\"content\">"
+                                    + "<div class=\"image\">"
+                                    + "<img src=\"" + image.get(content) + "\" alt=\"Overwatch\">"
+                                    + "</div>"
+                                    + "<div class=\"info\">"
+                                    + "<p>" + content + "</p>"
+                                    + "<p>" + (String) cartSession.get(i) + "pcs</p>"
+                                    + "<p>$" + price.get(content) + " per piece</p>"
+                                    + "</div>"
+                                    + "<div class=\"total-item\">"
+                                    + "<p class=\"right-title\">$" + (Integer.parseInt((String) cartSession.get(i)) * price.get(content)) + "</p>"
+                                    + "</div>"
+                                    + "</div>");
+                            sum = sum + (Integer.parseInt((String) cartSession.get(i)) * price.get(content));
+                        }
                     }
                 }
 
