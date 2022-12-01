@@ -52,7 +52,25 @@ public class LoginServlet extends HttpServlet {
                 HttpSession session = request.getSession();
                 session.setAttribute("username", uname);
                 response.sendRedirect("index.jsp");
-            } else {
+            } else if (uname.equals("dwight") && pass.equals("1234")) {
+                HttpSession session = request.getSession();
+                session.setAttribute("username", uname);
+                response.sendRedirect("index.jsp");
+            }else if (uname.equals("lex") && pass.equals("4321")) {
+                HttpSession session = request.getSession();
+                session.setAttribute("username", uname);
+                response.sendRedirect("index.jsp");
+            }
+            else if (uname.equals("nathanael") && pass.equals("5678")) {
+                HttpSession session = request.getSession();
+                session.setAttribute("username", uname);
+                response.sendRedirect("index.jsp");
+            }
+            else if (uname.equals("angelo") && pass.equals("8765")) {
+                HttpSession session = request.getSession();
+                session.setAttribute("username", uname);
+                response.sendRedirect("index.jsp");
+            }else {
                 response.sendRedirect("login.jsp"); //change to wrong credetials error kung meron na
             }
         }
