@@ -16,10 +16,10 @@
     </head>
     <body>
         <div>
-            <form action="index.jsp">
+            <form action="LoginServlet" method="POST">
                 <h2 id="Land-Games-Store">LAND<br>GAMES STORE</h2>
-                <input placeholder="Username" type="text" class="username-password" required>
-                <input placeholder="Password" type="password" class="username-password" required>
+                <input placeholder="Username" name="uname" type="text" class="username-password" required>
+                <input placeholder="Password" name="pass" type="password" class="username-password" required>
                 <button>Login</button>
                 <a href="signup.jsp">Sign up?</a>
             </form>
