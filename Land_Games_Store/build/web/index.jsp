@@ -80,7 +80,7 @@
                 </div>
                 <div class="content">
                     <img src="<% out.print(getServletContext().getInitParameter("popular_five_img")); %>" 
-                         alt=""<% out.print(getServletContext().getInitParameter("popular_five_name")); %>">
+                         alt="<% out.print(getServletContext().getInitParameter("popular_five_name")); %>">
                     <p><% out.print(getServletContext().getInitParameter("popular_five_name")); %></p>
                     <p>$<% out.print(getServletContext().getInitParameter("popular_five_price")); %></p>
                     <hr class="line">

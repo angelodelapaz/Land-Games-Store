@@ -168,10 +168,8 @@
                     <%
                         session = request.getSession();
                         ArrayList cartSession = (ArrayList)session.getAttribute("cartSession");
-                        Prices pr = new Prices();
-                        pr.setter();
-                        Map<String, Integer> price = pr.priceGetter();
-                        Map<String, String> image = pr.imageGetter();
+                        Map<String, String> image = (Map) getServletContext().getAttribute("image");
+                        Map<String, Integer> price = (Map) getServletContext().getAttribute("price");
                         String content = "";
                         int sum = 0;
                         for(int i = 0; i < cartSession.size(); i++)
