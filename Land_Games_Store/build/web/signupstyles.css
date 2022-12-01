@@ -4,17 +4,11 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Dec 1, 2022, 1:12:06 PM
+    Created on : Dec 1, 2022, 1:12:45 PM
     Author     : Dwight Kenneth
 */
-
 body {
-    background-color: #E8D9AC;
-    font-family: 'Montserrat', sans-serif;
-}
- 
-h2 {
-    text-align: center;
+    background-color: #dedeed;
 }
  
 form {
@@ -25,21 +19,18 @@ form {
     max-width: 300px;
 }
  
-.container{
+div {
     border: 1px solid black;
-    border-radius: 50px;
-    width: 25%;
+    width: 300px;
     margin: 50px auto;
-    margin-top: 250px;
-    padding: 10px 10px 20px 10px
+    padding: 10px 10px 30px 15px
 }
  
-.username-password, a, button {
-    width: 100%;
-    margin: 0;
-    max-width: 300px;
+h2, h3 {
+    text-align: center;
 }
  
+/*text field*/
 .username-password {
     line-height: 28px;
     border: 2px solid transparent;
@@ -49,6 +40,8 @@ form {
     background-color: transparent;
     color: #0d0c22;
     transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-left: 10%;
+    margin-bottom: 10px;
 }
    
 .username-password:focus, input:hover {
@@ -66,11 +59,10 @@ form {
     opacity: 0;
     transition: opacity .3s;
 }  
-
-
+/*Button*/
 button {
     padding: 1.3em 3em;
-    font-size: px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
@@ -82,12 +74,12 @@ button {
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 40px;
 }
  
 button:hover {
-    background-color: #570026   ;
+    background-color: #1b1b32;
     box-shadow: 0px 15px 20px #1b1b32;
     color: #dedeed;
     transform: translateY(-7px);
@@ -100,8 +92,7 @@ button:active {
 a {
     color: #0060B6;
     text-decoration: none;
-    padding-left: 50px;
-    margin-bottom: 10;
+   
 }
  
 a:hover {
@@ -110,47 +101,3 @@ a:hover {
     cursor:pointer;  
 }
 
-
-.navbar {
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    height: 50px;
-    background-color: #F2E1AE;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    margin-left: -10px;
-}
-
-.navtitle {
-    font-size: min(5vw, 1.2em);
-    text-align: center;
-    padding: 0.2rem;
-    margin: 0 10px 0.2rem;
-    color: black;
-}
-
-a {
-    text-decoration: none;
-}
-
-.logout {
-    color: black;
-    font-size: min(4vw, 1em);
-    text-align: center;
-    padding: 0.2rem;
-    margin: 0 0.2rem;
-}
-
-.logout:hover {
-    background-color: #dfdfe2;
-    color: #1b1b32;
-    cursor: pointer;
-}
-
-.links{
-    display: flex;
-    flex-wrap: nowrap;
-}
