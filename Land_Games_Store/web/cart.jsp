@@ -159,7 +159,8 @@
             boolean logIn = false;
 
             if (session.getAttribute("username") == null) {
-                logIn = false; //send to error na hindi naka log in
+                logIn = false;
+                response.sendRedirect("adderror.jsp");
             } else {
                 logIn = true;
             }
