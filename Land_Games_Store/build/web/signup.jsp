@@ -15,13 +15,20 @@
         <link rel="stylesheet" href="signupstyles.css" />
     </head>
     <body>
+        <%
+            response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");//HTTP 1.1
+            response.setHeader("Pragma", "no-cache");//HTTP 1.0
+            response.setHeader("Expires", "0");//Proxies
+
+           
+        %>
         <div>  
-            <form action="index.jsp">
+            <form action="SignupServlet">
                 <h2 id="Land-Games-Store">LAND<br>GAMES STORE</h2>
                 <h3>Sign-up</h3>
-                <input placeholder="Username*" type="text" class="username-password" required>
+                <input name="uname" placeholder="Username*" type="text" class="username-password" required>
                 <input placeholder="Email Address*" type="email" class="username-password" required>
-                <input placeholder="Password*" type="password" class="username-password" required>
+                <input name="pass" placeholder="Password*" type="password" class="username-password" required>
                 <button >Register</button>
             </form>
         </div>
