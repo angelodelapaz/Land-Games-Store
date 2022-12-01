@@ -24,7 +24,7 @@
                 <h1>LAND GAMES STORE</h1>
             </div>
             <div class="links">
-                <a href="" class="logout">Login/SignUp</a>
+                <a href="login.jsp" class="logout">Login/SignUp</a>
                 <a href="cart.jsp" class="logout">MyCart</a>
             </div>
         </header>
