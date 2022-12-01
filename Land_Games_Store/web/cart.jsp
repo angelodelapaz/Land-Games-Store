@@ -151,12 +151,33 @@
         </style>
     </head>
     <body>
+        <%
+            response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");//HTTP 1.1
+            response.setHeader("Pragma", "no-cache");//HTTP 1.0
+            response.setHeader("Expires", "0");//Proxies
+
+            boolean logIn = false;
+
+            if (session.getAttribute("username") == null) {
+                logIn = false; //send to error na hindi naka log in
+            } else {
+                logIn = true;
+            }
+        %>
         <header>
             <div>
                 <a href="index.jsp" class="logout"><h1>LAND GAMES STORE</h1></a>
             </div>
             <div class="links">
-                <a href="" class="logout">Login/SignUp</a>
+                <%
+                    if (logIn == true) {
+                        out.print("<a href=\"LogoutServlet\" class=\"logout\">Logout</a>");
+                    }
+                    else
+                    {
+                        out.print("<a href=\"login.jsp\" class=\"logout\">Login/SignUp</a>");
+                    }
+                %>
                 <a href="" class="logout">MyCart</a>
             </div>
         </header>

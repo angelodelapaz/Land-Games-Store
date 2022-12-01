@@ -7,21 +7,34 @@
         <servlet-name>process</servlet-name>
         <servlet-class>controller.processServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>controller.LogoutServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>process</servlet-name>
         <url-pattern>/process</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-    
-    
     <context-param>
         <param-name>popular_one_name</param-name>
         <param-value>Overwatch</param-value>
@@ -82,7 +95,6 @@
         <param-name>popular_five_price</param-name>
         <param-value>300</param-value>
     </context-param>
-    
     <context-param>
         <param-name>new_one_name</param-name>
         <param-value>Learning Factory</param-value>
@@ -131,7 +143,7 @@
         <param-name>new_four_price</param-name>
         <param-value>450</param-value>
     </context-param>
-     <context-param>
+    <context-param>
         <param-name>new_five_name</param-name>
         <param-value>Fire Commander</param-value>
     </context-param>
@@ -143,7 +155,6 @@
         <param-name>new_five_price</param-name>
         <param-value>500</param-value>
     </context-param>
-    
     <error-page>
         <error-code>404</error-code>
         <location>/error404.jsp</location>

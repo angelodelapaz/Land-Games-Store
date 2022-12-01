@@ -19,12 +19,33 @@
         <title>LAND Games Store</title>
     </head>
     <body>
+        <%
+            response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");//HTTP 1.1
+            response.setHeader("Pragma", "no-cache");//HTTP 1.0
+            response.setHeader("Expires", "0");//Proxies
+
+            boolean logIn = false;
+
+            if (session.getAttribute("username") == null) {
+                logIn = false;
+            } else {
+                logIn = true;
+            }
+        %>
         <header class="navbar">
             <div>
                 <h1>LAND GAMES STORE</h1>
             </div>
             <div class="links">
-                <a href="login.jsp" class="logout">Login/SignUp</a>
+                <%
+                    if (logIn == true) {
+                        out.print("<a href=\"LogoutServlet\" class=\"logout\">Logout</a>");
+                    }
+                    else
+                    {
+                        out.print("<a href=\"login.jsp\" class=\"logout\">Login/SignUp</a>");
+                    }
+                %>
                 <a href="cart.jsp" class="logout">MyCart</a>
             </div>
         </header>
@@ -141,7 +162,7 @@
                     <img src="<% out.print(getServletContext().getInitParameter("new_five_img")); %>"
                          alt="<% out.print(getServletContext().getInitParameter("new_five_name")); %>">
                     <p><% out.print(getServletContext().getInitParameter("new_five_name")); %></p>
-                    <p>$<% out.print(getServletContext().getInitParameter("new_five_price")); %></p>
+                    <p>$<% out.print(getServletContext().getInitParameter("new_five_price"));%></p>
                     <hr class="line">
                     <form action="">
                         <input type="number" min="0" step="1" class="counter" placeholder="0"/>
