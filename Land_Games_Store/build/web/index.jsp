@@ -61,7 +61,7 @@
                     <hr class="line">
                     <form action="process">
                         <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
-                        <input type="hidden" name="content" value="Overwatch">
+                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("popular_one_name")); %>">
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -73,7 +73,7 @@
                     <hr class="line">
                     <form action="process">
                         <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
-                        <input type="hidden" name="content" value="Valorant">
+                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("popular_two_name")); %>">
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -84,7 +84,8 @@
                     <p>$<% out.print(getServletContext().getInitParameter("popular_three_price")); %></p>
                     <hr class="line">
                     <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
+                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
+                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("popular_three_name")); %>">
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -95,7 +96,8 @@
                     <p>$<% out.print(getServletContext().getInitParameter("popular_four_price")); %></p>
                     <hr class="line">
                     <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
+                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
+                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("popular_four_name")); %>">
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -106,7 +108,8 @@
                     <p>$<% out.print(getServletContext().getInitParameter("popular_five_price")); %></p>
                     <hr class="line">
                     <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
+                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
+                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("popular_five_name")); %>">
                         <button>Add to Cart</button>
                     </form>
                 </div>                
@@ -121,7 +124,8 @@
                     <p>$<% out.print(getServletContext().getInitParameter("new_one_price")); %></p>
                     <hr class="line">
                     <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
+                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
+                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("new_one_name")); %>">
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -132,7 +136,8 @@
                     <p>$<% out.print(getServletContext().getInitParameter("new_two_price")); %></p>
                     <hr class="line">
                     <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
+                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
+                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("new_two_name")); %>">
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -143,7 +148,8 @@
                     <p>$<% out.print(getServletContext().getInitParameter("new_three_price")); %></p>
                     <hr class="line">
                     <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
+                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
+                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("new_three_name")); %>">
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -154,7 +160,8 @@
                     <p>$<% out.print(getServletContext().getInitParameter("new_four_price")); %></p>
                     <hr class="line">
                     <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
+                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
+                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("new_four_name")); %>">
                         <button>Add to Cart</button>
                     </form>
                 </div>
@@ -165,7 +172,8 @@
                     <p>$<% out.print(getServletContext().getInitParameter("new_five_price"));%></p>
                     <hr class="line">
                     <form action="">
-                        <input type="number" min="0" step="1" class="counter" placeholder="0"/>
+                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
+                        <input type="hidden" name="content" value="<% out.print(getServletContext().getInitParameter("new_five_name")); %>">
                         <button>Add to Cart</button>
                     </form>
                 </div>
