@@ -8,7 +8,8 @@ and open the template in the editor.
     Author     : Dwight Kenneth
 */
 body {
-    background-color: #dedeed;
+    background-color: #E8D9AC;
+    font-family: 'Montserrat', sans-serif;
 }
  
 form {
@@ -19,13 +20,20 @@ form {
     max-width: 300px;
 }
  
-div {
+.container{
     border: 1px solid black;
-    width: 300px;
+    border-radius: 50px;
+    width: 25%;
     margin: 50px auto;
-    padding: 10px 10px 30px 15px
+    margin-top: 250px;
+    padding: 10px 10px 20px 10px
 }
  
+.username-password, a, button {
+    width: 100%;
+    margin: 0;
+    max-width: 300px;
+}
 h2, h3 {
     text-align: center;
 }
@@ -40,8 +48,6 @@ h2, h3 {
     background-color: transparent;
     color: #0d0c22;
     transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    margin-left: 10%;
-    margin-bottom: 10px;
 }
    
 .username-password:focus, input:hover {
@@ -74,8 +80,8 @@ button {
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
-    margin-top: 15px;
-    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
  
 button:hover {
@@ -88,7 +94,8 @@ button:hover {
 button:active {
     transform: translateY(-1px);
 }
- 
+
+
 a {
     color: #0060B6;
     text-decoration: none;

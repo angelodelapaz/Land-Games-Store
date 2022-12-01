@@ -22,7 +22,7 @@
 
            
         %>
-        <div>  
+        <div class="container">  
             <form action="SignupServlet">
                 <h2 id="Land-Games-Store">LAND<br>GAMES STORE</h2>
                 <h3>Sign-up</h3>
