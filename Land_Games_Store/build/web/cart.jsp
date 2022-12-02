@@ -190,13 +190,10 @@
                         if (logIn == true) {
                             session = request.getSession();
                             ArrayList cartSession = (ArrayList) session.getAttribute("cartSession");
-                            
-                            if(cartSession == null)
-                            {
+
+                            if (cartSession == null) {
                                 response.sendRedirect("COerror.jsp");
-                            }
-                            else
-                            {
+                            } else {
                                 Map<String, String> image = (Map) getServletContext().getAttribute("image");
                                 Map<String, Integer> price = (Map) getServletContext().getAttribute("price");
                                 String content = "";
@@ -212,6 +209,11 @@
                                                 + "<div class=\"info\">"
                                                 + "<p>" + content + "</p>"
                                                 + "<p>" + (String) cartSession.get(i) + "pcs</p>"
+                                                + "<form action=\"update\" method=\"POST\">"
+                                                + "<input type=\"number\" min=\"0\" step=\"1\" class=\"counter\" value=\"" + Integer.parseInt((String) cartSession.get(i)) + "\" name=\"quantity\"/>"
+                                                + "<input type=\"hidden\" name=\"content\" value=\"" + content + "\">"
+                                                + "<button>Update Cart</button>"
+                                                + "</form>"
                                                 + "<p>$" + price.get(content) + " per piece</p>"
                                                 + "</div>"
                                                 + "<div class=\"total-item\">"
@@ -223,8 +225,7 @@
 
                                 }
                             }
-                            
-                            
+
                         }
 
                     %>
