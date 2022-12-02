@@ -50,10 +50,10 @@ public class processServlet extends HttpServlet {
             String content = request.getParameter("content");
             Storing st = new Storing();
 
-            if(quantity == ""){
+            if(quantity.equals("")){
                 response.sendError(500);
             }
-            if (quantity != "") {
+            else {
                 st.setter(content, quantity);
                 List<String> cart = st.getter();
                 ArrayList cartSession = (ArrayList) session.getAttribute("cartSession");
