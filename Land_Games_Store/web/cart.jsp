@@ -187,6 +187,7 @@
                 <div class="left">
                     <%
                         int sum = 0;
+                        int items = 0;
                         if (logIn == true) {
                             session = request.getSession();
                             ArrayList cartSession = (ArrayList) session.getAttribute("cartSession");
@@ -220,6 +221,7 @@
                                                 + "<p class=\"right-title\">$" + (Integer.parseInt((String) cartSession.get(i)) * price.get(content)) + "</p>"
                                                 + "</div>"
                                                 + "</div>");
+                                        items = items + Integer.parseInt((String) cartSession.get(i));
                                         sum = sum + (Integer.parseInt((String) cartSession.get(i)) * price.get(content));
                                     }
 
@@ -236,6 +238,11 @@
                     <p class="left-title">Taxes</p><p class="right-title">Calculated at checkout</p>
                     <hr class="line">
                     <p class="left-title">Subtotal</p><p class="right-title">$<%out.print(sum);%></p>
+                    <form action="checkout.jsp">
+                        <input type="hidden" name="price" value="<%out.print(sum);%>">
+                        <input type="hidden" name="items" value="<%out.print(items);%>">
+                        <button>Checkout</button>
+                    </form>
                 </div>
             </div>
         </main>
