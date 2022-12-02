@@ -63,7 +63,7 @@
                                         "<p>" + getServletContext().getInitParameter("popular_" + i + "_name") + "</p>" +
                                         "<p>$" + getServletContext().getInitParameter("popular_" + i + "_price") + "</p>" +
                                         "<hr class=\"line\">" +
-                                        "<form action=\"process\">" +
+                                        "<form action=\"process\" method=\"POST\">" +
                                             "<input type=\"number\" min=\"0\" step=\"1\" class=\"counter\" placeholder=\"0\" name=\"quantity\"/>" +
                                             "<input type=\"hidden\" name=\"content\" value=\"" + getServletContext().getInitParameter("popular_" + i + "_name") + "\">" +
                                             "<button>Add to Cart</button>" +
@@ -85,7 +85,7 @@
                                         "<p>" + getServletContext().getInitParameter("new_" + i + "_name") + "</p>" +
                                         "<p>$" + getServletContext().getInitParameter("new_" + i + "_price") + "</p>" +
                                         "<hr class=\"line\">" +
-                                        "<form action=\"process\">" +
+                                        "<form action=\"process\" method=\"POST\">" +
                                             "<input type=\"number\" min=\"0\" step=\"1\" class=\"counter\" placeholder=\"0\" name=\"quantity\"/>" +
                                             "<input type=\"hidden\" name=\"content\" value=\"" + getServletContext().getInitParameter("new_" + i + "_name") + "\">" +
                                             "<button>Add to Cart</button>" +
