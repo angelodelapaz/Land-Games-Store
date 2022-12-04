@@ -191,9 +191,11 @@
                         if (logIn == true) {
                             session = request.getSession();
                             ArrayList cartSession = (ArrayList) session.getAttribute("cartSession");
-
-                            if (cartSession == null) {
-                                response.sendRedirect("COerror.jsp");
+                            
+                            if (cartSession == null || cartSession.size() == 0) {
+                    %>
+                            <h3>You currently have nothing in your cart.</h3>
+                    <%
                             } else {
                                 Map<String, String> image = (Map) getServletContext().getAttribute("image");
                                 Map<String, Integer> price = (Map) getServletContext().getAttribute("price");
