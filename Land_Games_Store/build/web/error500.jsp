@@ -55,6 +55,7 @@
         <h1>500 :((</h1>
         <h2>Server Error</h2>
         <h3>The server encountered an internal error and could not complete your request</h3>
+         <form action="index.jsp"><button class="button">Home</button></form>
     </main>
   </body>
 </html>

@@ -13,142 +13,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+            rel="stylesheet"
+            />
+        <<link rel="stylesheet" href="cartstyles.css"/>
         <title>LAND Games Store</title>
-        <style>
-            header {
-                width: 100%;
-                height: 50px;
-                background-color: #32a660;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                position: fixed;
-                top: 0;
-                margin-left: -10px;
-            }
-
-            h1 {
-                font-size: min(5vw, 1.2em);
-                text-align: center;
-                padding: 0.2rem;
-                margin: 0 10px 0.2rem;
-                color: black;
-            }
-
-            a {
-                text-decoration: none;
-            }
-
-            .logout {
-                color: black;
-                font-size: min(4vw, 1em);
-                text-align: center;
-                padding: 0.2rem;
-                margin: 0 0.2rem;
-            }
-
-            .logout:hover {
-                background-color: #dfdfe2;
-                color: #1b1b32;
-                cursor: pointer;
-            }
-
-            .links{
-                display: flex;
-                flex-wrap: nowrap;
-            }
-
-            body{
-                background-color: #52422d;
-            }
-
-            main {
-                margin-top: 60px;
-                max-width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            h2{
-                color: white;
-            }
-
-            hr {
-                margin-top: 5px;
-                height: 1px;
-                background-color: #ffffff;
-                border-color: #ffffff;
-            }
-
-            .container {
-                display: flex;
-                flex-direction: row;
-            }
-
-            .left {
-                height: 100%;
-                width: 70%;
-                background-color: #816848;
-                border-right: 1px solid white;
-            }
-
-            .content {
-                display: flex;
-                flex-direction: row;
-                padding: 20px;
-            }
-
-            img {
-                height: 190px;
-                width: 140px;
-            }
-
-            .image {
-                margin-right: 20px;
-            }
-
-            .right {
-                height: 100%;
-                width: 30%;
-                background-color: #816848;
-                border-left: 1px solid white;
-                text-align: center;
-                padding: 28px;
-            }
-
-            .line {
-                max-width: 90%;
-                height: 1px;
-                background-color: #69543a;
-                border-color: #69543a;
-            }
-
-            .right p {
-                display: inline-block;
-                margin-top: 5px;
-                margin-bottom: 5px;
-            }
-
-            .left-title {
-                text-align: left;
-                width: 75%;
-            }
-
-            .right-title {
-                text-align: right;
-                width: 25%;
-            }
-
-            .total-item{
-                width:inherit;
-                margin-left: 25%;
-                margin-right: 25%;
-            }
-
-            #total-item-price{
-                font-weight: bold;
-            }
-        </style>
     </head>
     <body>
         <%
@@ -165,9 +37,9 @@
                 logIn = true;
             }
         %>
-        <header>
+        <header class="navbar">
             <div>
-                <a href="index.jsp" class="logout"><h1>LAND GAMES STORE</h1></a>
+                <a href="index.jsp"><h1 class="navtitle">LAND GAMES STORE</h1></a>
             </div>
             <div class="links">
                 <%
@@ -191,10 +63,10 @@
                         if (logIn == true) {
                             session = request.getSession();
                             ArrayList cartSession = (ArrayList) session.getAttribute("cartSession");
-                            
+
                             if (cartSession == null || cartSession.size() == 0) {
                     %>
-                            <h3>You currently have nothing in your cart.</h3>
+                    <h3>You currently have nothing in your cart.</h3>
                     <%
                             } else {
                                 Map<String, String> image = (Map) getServletContext().getAttribute("image");
@@ -210,17 +82,17 @@
                                                 + "<img src=\"" + image.get(content) + "\" alt=\"" + content + "\">"
                                                 + "</div>"
                                                 + "<div class=\"info\">"
-                                                + "<p>" + content + "</p>"
-                                                + "<p>" + (String) cartSession.get(i) + "pcs</p>"
+                                                + "<p>Item: " + content + "</p>"
+                                                + "<p>Quantity: " + (String) cartSession.get(i) + "pcs</p>"
+                                                + "<p>Price: $" + price.get(content) + "</p>"
                                                 + "<form action=\"update\" method=\"POST\">"
                                                 + "<input type=\"number\" min=\"0\" step=\"1\" class=\"counter\" value=\"" + Integer.parseInt((String) cartSession.get(i)) + "\" name=\"quantity\"/>"
                                                 + "<input type=\"hidden\" name=\"content\" value=\"" + content + "\">"
-                                                + "<button>Update Cart</button>"
+                                                + "<button class=\"button\">Update Cart</button>"
                                                 + "</form>"
-                                                + "<p>$" + price.get(content) + " per piece</p>"
                                                 + "</div>"
                                                 + "<div class=\"total-item\">"
-                                                + "<p class=\"right-title\">$" + (Integer.parseInt((String) cartSession.get(i)) * price.get(content)) + "</p>"
+                                                + "<p>Total Price: $" + (Integer.parseInt((String) cartSession.get(i)) * price.get(content)) + "</p>"
                                                 + "</div>"
                                                 + "</div>");
                                         items = items + Integer.parseInt((String) cartSession.get(i));
@@ -235,7 +107,7 @@
                     %>
                 </div>
                 <div class="right">
-                    <h3>Games and Apps Summary</h3>
+                    <h2>Games and Apps Summary</h3>
                     <p class="left-title">Price</p><p class="right-title">$<%out.print(sum);%></p>
                     <p class="left-title">Taxes</p><p class="right-title">Calculated at checkout</p>
                     <hr class="line">
@@ -243,7 +115,7 @@
                     <form action="checkout.jsp">
                         <input type="hidden" name="price" value="<%out.print(sum);%>">
                         <input type="hidden" name="items" value="<%out.print(items);%>">
-                        <button>Checkout</button>
+                        <button class="button">Checkout</button>
                     </form>
                 </div>
             </div>

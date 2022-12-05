@@ -36,7 +36,7 @@
         %>
         <header class="navbar">
             <div>
-                <a href="index.jsp" class="logout"><h1>LAND GAMES STORE</h1></a>
+                <a href="index.jsp"><h1 class="navtitle">LAND GAMES STORE</h1></a>
             </div>
             <div class="links">
                 <%
@@ -55,6 +55,7 @@
         <h1>Error</h1>
         <h2>You are not logged in</h2>
         <h3>Only logged in users can add to cart. Please log in</h3>
+        <form action="index.jsp"><button class="button">Home</button></form>
     </main>
   </body>
 </html>

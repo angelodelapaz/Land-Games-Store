@@ -59,6 +59,7 @@ main{
 main h1{
     font-size: 5rem;
 }
+
 .button {
     padding: 20px;
     margin: auto;
@@ -84,4 +85,3 @@ main h1{
 .button:active {
     transform: translateY(-1px);
 }
-

@@ -34,7 +34,7 @@
         %>
         <header class="navbar">
             <div>
-                <h1>LAND GAMES STORE</h1>
+                <h1 class="navtitle">LAND GAMES STORE</h1>
             </div>
             <div class="links">
                 <%
@@ -50,7 +50,7 @@
             </div>
         </header>
         <main>
-            <h4>Most popular</h4>
+            <h2>Most popular</h2>
             <hr>
             <section> <!--Try gawing setSession nalnag yung mga form-->
                 
@@ -66,13 +66,13 @@
                                         "<form action=\"process\" method=\"POST\">" +
                                             "<input type=\"number\" min=\"0\" step=\"1\" class=\"counter\" placeholder=\"0\" name=\"quantity\"/>" +
                                             "<input type=\"hidden\" name=\"content\" value=\"" + getServletContext().getInitParameter("popular_" + i + "_name") + "\">" +
-                                            "<button>Add to Cart</button>" +
+                                            "<button class= \"button\">Add to Cart</button>" +
                                         "</form>" +
                                     "</div>");
                     }
                 %>
             </section>
-            <h4>New Releases</h4>
+            <h2>New Releases</h2>
             <hr>
             <section> <!--Try gawing setSession nalnag yung mga form-->
                 
@@ -88,7 +88,7 @@
                                         "<form action=\"process\" method=\"POST\">" +
                                             "<input type=\"number\" min=\"0\" step=\"1\" class=\"counter\" placeholder=\"0\" name=\"quantity\"/>" +
                                             "<input type=\"hidden\" name=\"content\" value=\"" + getServletContext().getInitParameter("new_" + i + "_name") + "\">" +
-                                            "<button>Add to Cart</button>" +
+                                            "<button class= \"button\">Add to Cart</button>" +
                                         "</form>" +
                                     "</div>");
                     }

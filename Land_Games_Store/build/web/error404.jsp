@@ -53,6 +53,7 @@
             <h1>404 :(</h1>
             <h2>Page not found</h2>
             <h3>The page you are looking for does not exist</h3>
+             <form action="index.jsp"><button class="button">Home</button></form>
         </main>
     </body>
 </html>
