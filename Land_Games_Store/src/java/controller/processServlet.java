@@ -50,7 +50,7 @@ public class processServlet extends HttpServlet {
             String content = request.getParameter("content");
             Storing st = new Storing();
 
-            if(quantity.equals("")){
+            if(quantity.equals("") || quantity.equals("0")){
                 response.sendError(500);
             }
             else {

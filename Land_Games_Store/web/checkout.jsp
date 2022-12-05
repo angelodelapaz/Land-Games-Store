@@ -15,7 +15,7 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
             rel="stylesheet"
             />
-        <<link rel="stylesheet" href="checkoutstyles.css"/>
+        <link rel="stylesheet" href="checkoutstyles.css"/>
         <title>Checkout</title>
     </head>
     <body>
@@ -38,7 +38,7 @@
                 <a href="index.jsp"><h1 class="navtitle">LAND GAMES STORE</h1></a>
             </div>
             <div class="links">
-                <a href=\"LogoutServlet\" class="logout">Logout</a>
+                <a href="LogoutServlet" class="logout">Logout</a>
                 <a href="" class="logout">MyCart</a>
             </div>
         </header>
@@ -52,10 +52,14 @@
             else
             {
         %>
-        <h1>Thank you for your purchase, <%out.print((String)session.getAttribute("username"));%>!</h3>
-        <h2>Your total price will be $<%out.print(request.getParameter("price"));%>.</h1>
+        <h1>Thank you for your purchase, <%out.print((String)session.getAttribute("username"));%>!</h1>
+        <h2>Your total price will be $<%out.print(request.getParameter("price"));%>.</h2>
         <h2>A total of <%out.print(request.getParameter("items"));%> items will be delivered to you as soon as possible.</h2>   
-        <%}%>
+        <%
+            }
+            session = request.getSession();
+            session.removeAttribute("cartSession");
+        %>
         <form action="index.jsp"><button class="button">Home</button></form>
         </main>  
     </body>
