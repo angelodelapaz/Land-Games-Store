@@ -68,33 +68,35 @@
                     %>
                     <h3>You currently have nothing in your cart.</h3>
                     <%
-                            } else {
-                                Map<String, String> image = (Map) getServletContext().getAttribute("image");
-                                Map<String, Integer> price = (Map) getServletContext().getAttribute("price");
-                                String content = "";
+                    } else {
+                        Map<String, String> image = (Map) getServletContext().getAttribute("image");
+                        Map<String, Integer> price = (Map) getServletContext().getAttribute("price");
+                        String content = "";
 
-                                for (int i = 0; i < cartSession.size(); i++) {
-                                    if (i % 2 == 0) {
-                                        content = (String) cartSession.get(i);
-                                    } else {
-                                        out.println("<div class=\"content\">"
-                                                + "<div class=\"image\">"
-                                                + "<img src=\"" + image.get(content) + "\" alt=\"" + content + "\">"
-                                                + "</div>"
-                                                + "<div class=\"info\">"
-                                                + "<p>Item: " + content + "</p>"
-                                                + "<p>Quantity: " + (String) cartSession.get(i) + "pcs</p>"
-                                                + "<p>Price: $" + price.get(content) + "</p>"
-                                                + "<form action=\"update\" method=\"POST\">"
-                                                + "<input type=\"number\" min=\"0\" step=\"1\" class=\"counter\" value=\"" + Integer.parseInt((String) cartSession.get(i)) + "\" name=\"quantity\"/>"
-                                                + "<input type=\"hidden\" name=\"content\" value=\"" + content + "\">"
-                                                + "<button class=\"button\">Update Cart</button>"
-                                                + "</form>"
-                                                + "</div>"
-                                                + "<div class=\"total-item\">"
-                                                + "<p>Total Price: $" + (Integer.parseInt((String) cartSession.get(i)) * price.get(content)) + "</p>"
-                                                + "</div>"
-                                                + "</div>");
+                        for (int i = 0; i < cartSession.size(); i++) {
+                            if (i % 2 == 0) {
+                                content = (String) cartSession.get(i);
+                            } else {%>
+
+                    <div class="content">
+                        <div class="image">
+                            <img src="<%=image.get(content)%>" alt="<%=content%>">
+                        </div>
+                        <div class="info">
+                            <p>Item: <%=content%></p>
+                            <p>Quantity: <%=(String) cartSession.get(i)%>pcs</p>
+                            <p>Price: $<%=price.get(content)%></p>
+                            <form action="update" method="POST">
+                                <%out.print("<input type=\"number\" min=\"0\" step=\"1\" class=\"counter\" value=\"" + Integer.parseInt((String) cartSession.get(i)) + "\" name=\"quantity\"/>");%>
+                                <input type="hidden" name="content" value="<%=content%>">
+                                <button class="button">Update Cart</button>
+                            </form>
+                        </div>
+                        <div class="total-item">
+                            <p>Total Price: $<%=Integer.parseInt((String) cartSession.get(i)) * price.get(content)%></p>
+                        </div>
+                    </div>
+                    <%
                                         items = items + Integer.parseInt((String) cartSession.get(i));
                                         sum = sum + (Integer.parseInt((String) cartSession.get(i)) * price.get(content));
                                     }
@@ -108,15 +110,15 @@
                 </div>
                 <div class="right">
                     <h2>Games and Apps Summary</h3>
-                    <p class="left-title">Price</p><p class="right-title">$<%out.print(sum);%></p>
-                    <p class="left-title">Taxes</p><p class="right-title">Calculated at checkout</p>
-                    <hr class="line">
-                    <p class="left-title">Subtotal</p><p class="right-title">$<%out.print(sum);%></p>
-                    <form action="checkout.jsp">
-                        <input type="hidden" name="price" value="<%out.print(sum);%>">
-                        <input type="hidden" name="items" value="<%out.print(items);%>">
-                        <button class="button">Checkout</button>
-                    </form>
+                        <p class="left-title">Price</p><p class="right-title">$<%out.print(sum);%></p>
+                        <p class="left-title">Taxes</p><p class="right-title">Calculated at checkout</p>
+                        <hr class="line">
+                        <p class="left-title">Subtotal</p><p class="right-title">$<%out.print(sum);%></p>
+                        <form action="checkout.jsp">
+                            <input type="hidden" name="price" value="<%out.print(sum);%>">
+                            <input type="hidden" name="items" value="<%out.print(items);%>">
+                            <button class="button">Checkout</button>
+                        </form>
                 </div>
             </div>
         </main>

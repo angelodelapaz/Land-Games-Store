@@ -42,7 +42,7 @@ public class Prices {
         image.put("Valorant", "https://m.media-amazon.com/images/M/MV5BNmNhM2NjMTgtNmIyZC00ZmVjLTk4YWItZmZjNGY2NThiNDhkXkEyXkFqcGdeQXVyODU4MDU1NjU@._V1_.jpg");
         image.put("Minecraft", "https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg");
         image.put("GTA V", "https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/14/gaming-gta5-cover.jpeg");
-        image.put("Fornite", "https://assets1.ignimgs.com/2018/03/06/fortnite---button-1520296499714.jpg");
+        image.put("Fortnite", "https://assets1.ignimgs.com/2018/03/06/fortnite---button-1520296499714.jpg");
         image.put("Learning Factory", "https://cdn1.epicgames.com/spt-assets/404ba51e87854be9a9c78dd9463a6183/learning-factory-11zgy.jpg");
         image.put("Space Haste 2", "https://cdn1.epicgames.com/spt-assets/74e00ede2ee448f8a05367edfe381c1b/sapce-haste-2-8f4kh.png");
         image.put("Wild Earth - Africa", "https://cdn1.epicgames.com/spt-assets/35fc4fe5ae3b447395ed440ea01de788/wild-earth--africa-1w3k2.png");

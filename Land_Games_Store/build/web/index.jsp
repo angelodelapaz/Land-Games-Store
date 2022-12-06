@@ -40,9 +40,7 @@
                 <%
                     if (logIn == true) {
                         out.print("<a href=\"LogoutServlet\" class=\"logout\">Logout</a>");
-                    }
-                    else
-                    {
+                    } else {
                         out.print("<a href=\"login.jsp\" class=\"logout\">Login/SignUp</a>");
                     }
                 %>
@@ -53,46 +51,40 @@
             <h2>Most popular</h2>
             <hr>
             <section> <!--Try gawing setSession nalnag yung mga form-->
-                
-                <%
-                    for(int i = 1; i < 6; i++)
-                    {
-                        out.print("<div class=\"content\">" +
-                                        "<img src=\"" + getServletContext().getInitParameter("popular_" + i + "_img") + "\"" +
-                                                "alt=\"" + getServletContext().getInitParameter("popular_" + i + "_name") + "\">" +
-                                        "<p>" + getServletContext().getInitParameter("popular_" + i + "_name") + "</p>" +
-                                        "<p>$" + getServletContext().getInitParameter("popular_" + i + "_price") + "</p>" +
-                                        "<hr class=\"line\">" +
-                                        "<form action=\"process\" method=\"POST\">" +
-                                            "<input type=\"number\" min=\"0\" step=\"1\" class=\"counter\" placeholder=\"0\" name=\"quantity\"/>" +
-                                            "<input type=\"hidden\" name=\"content\" value=\"" + getServletContext().getInitParameter("popular_" + i + "_name") + "\">" +
-                                            "<button class= \"button\">Add to Cart</button>" +
-                                        "</form>" +
-                                    "</div>");
-                    }
-                %>
+
+                <%for (int i = 1; i < 6; i++) {%>
+                <div class="content">
+                    <img src="<%= getServletContext().getInitParameter("popular_" + i + "_img")%>" 
+                         alt="<%=getServletContext().getInitParameter("popular_" + i + "_name")%>">
+                    <p><%=getServletContext().getInitParameter("popular_" + i + "_name")%></p>
+                    <p>$<%=getServletContext().getInitParameter("popular_" + i + "_price")%></p>
+                    <hr class="line">
+                    <form action="process" method="POST">
+                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
+                        <input type="hidden" name="content" value="<%=getServletContext().getInitParameter("popular_" + i + "_name")%>">
+                        <button class="button">Add to Cart</button>
+                    </form>
+                </div> 
+                <%}%>
             </section>
             <h2>New Releases</h2>
             <hr>
             <section> <!--Try gawing setSession nalnag yung mga form-->
-                
-                <%
-                    for(int i = 1; i < 6; i++)
-                    {
-                        out.print("<div class=\"content\">" +
-                                        "<img src=\"" + getServletContext().getInitParameter("new_" + i + "_img") + "\"" +
-                                                "alt=\"" + getServletContext().getInitParameter("new_" + i + "_name") + "\">" +
-                                        "<p>" + getServletContext().getInitParameter("new_" + i + "_name") + "</p>" +
-                                        "<p>$" + getServletContext().getInitParameter("new_" + i + "_price") + "</p>" +
-                                        "<hr class=\"line\">" +
-                                        "<form action=\"process\" method=\"POST\">" +
-                                            "<input type=\"number\" min=\"0\" step=\"1\" class=\"counter\" placeholder=\"0\" name=\"quantity\"/>" +
-                                            "<input type=\"hidden\" name=\"content\" value=\"" + getServletContext().getInitParameter("new_" + i + "_name") + "\">" +
-                                            "<button class= \"button\">Add to Cart</button>" +
-                                        "</form>" +
-                                    "</div>");
-                    }
-                %>
+
+                <%for (int i = 1; i < 6; i++) {%>
+                <div class="content">
+                    <img src="<%= getServletContext().getInitParameter("new_" + i + "_img")%>" 
+                         alt="<%=getServletContext().getInitParameter("new_" + i + "_name")%>">
+                    <p><%=getServletContext().getInitParameter("new_" + i + "_name")%></p>
+                    <p>$<%=getServletContext().getInitParameter("new_" + i + "_price")%></p>
+                    <hr class="line">
+                    <form action="process" method="POST">
+                        <input type="number" min="0" step="1" class="counter" placeholder="0" name="quantity"/>
+                        <input type="hidden" name="content" value="<%=getServletContext().getInitParameter("new_" + i + "_name")%>">
+                        <button class="button">Add to Cart</button>
+                    </form>
+                </div> 
+                <%}%>
             </section>
         </main>
     </body>
