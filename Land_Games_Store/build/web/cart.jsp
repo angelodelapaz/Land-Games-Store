@@ -19,7 +19,7 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
             rel="stylesheet"
             />
-        <<link rel="stylesheet" href="cartstyles.css"/>
+        <link rel="stylesheet" href="cartstyles.css"/>
         <title>LAND Games Store</title>
     </head>
     <body>

@@ -64,7 +64,6 @@ public class processServlet extends HttpServlet {
                     if (cartSession.contains(content)) {
                         int index = cartSession.indexOf(content);
                         String temp = (String) cartSession.get(index + 1);
-
                         int amount = Integer.parseInt(temp);
                         amount = amount + Integer.parseInt(quantity);
                         cartSession.set(index + 1, Integer.toString(amount));
@@ -74,7 +73,6 @@ public class processServlet extends HttpServlet {
                     }
                 }
                 response.sendRedirect("index.jsp");
-                System.out.print(cartSession + "handsome");
             }
         }
     }

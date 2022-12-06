@@ -48,7 +48,7 @@ public class UpdateServlet extends HttpServlet {
             String quantity = request.getParameter("quantity");
             String content = request.getParameter("content");
             
-            if(quantity == ""){
+            if(quantity.equals("")){
                 response.sendError(500);
             }
             else
