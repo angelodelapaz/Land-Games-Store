@@ -37,7 +37,7 @@
         %>
         <header class="navbar">
             <div>
-                <a href="index.jsp" class="logout"><h1>LAND GAMES STORE</h1></a>
+                <a href="index.jsp" ><h1 class="navtitle">LAND GAMES STORE</h1></a>
             </div>
             <div class="links">
                 <a href="login.jsp" class="logout">Login/SignUp</a>

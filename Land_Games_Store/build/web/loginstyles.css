@@ -111,8 +111,10 @@ a:hover {
 }
 
 
-.navbar {
+*{
     font-family: 'Montserrat', sans-serif;
+}
+.navbar {
     width: 100%;
     height: 50px;
     background-color: #F2E1AE;
@@ -125,10 +127,9 @@ a:hover {
 }
 
 .navtitle {
-    font-size: min(5vw, 1.2em);
     text-align: center;
     padding: 0.2rem;
-    margin: 0 10px 0.2rem;
+    margin-left: 1rem;
     color: black;
 }
 
@@ -138,14 +139,15 @@ a {
 
 .logout {
     color: black;
-    font-size: min(4vw, 1em);
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
     padding: 0.2rem;
     margin: 0 0.2rem;
 }
 
 .logout:hover {
-    background-color: #dfdfe2;
+   
     color: #1b1b32;
     cursor: pointer;
 }
