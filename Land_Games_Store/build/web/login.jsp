@@ -51,7 +51,7 @@
                     <input placeholder="Username" name="uname" type="text" class="username-password" required>
                     <input placeholder="Password" name="pass" type="password" class="username-password" required>
                     <button>Login</button>
-                    <a href="signup.jsp">Sign up?</a>
+                    <a class="signup" href="signup.jsp">Sign up?</a>
                 </form>
             </div>
         </main>

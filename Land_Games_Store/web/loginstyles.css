@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 body {
-    background-color: #E8D9AC;
+    background-color: #D0A17E;
     font-family: 'Montserrat', sans-serif;
 }
  
@@ -43,11 +43,11 @@ form {
 .username-password {
     line-height: 28px;
     border: 2px solid transparent;
-    border-bottom-color: #777;
+    border-bottom-color: black;
     padding: .2rem 0;
     outline: none;
     background-color: transparent;
-    color: #0d0c22;
+    color: black;
     transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
    
@@ -55,11 +55,11 @@ form {
     outline: none;
     padding: .2rem 1rem;
     border-radius: 1rem;
-    border-color: #7a9cc6;
+    border-color: black;
 }
    
 .username-password::placeholder {
-    color: #777;
+    color: black;
 }
    
 .username-password:focus::placeholder {
@@ -98,14 +98,15 @@ button:active {
 }
  
 a {
-    color: #0060B6;
+    color: black;
     text-decoration: none;
-    padding-left: 50px;
+    padding-left: 120px;
     margin-bottom: 14px;
+    text-align: center;
 }
  
 a:hover {
-    color:#00A0C6;
+    color: gray;
     text-decoration:none;
     cursor:pointer;  
 }
@@ -130,6 +131,7 @@ a:hover {
     text-align: center;
     padding: 0.2rem;
     margin-left: 1rem;
+    margin-bottom: 2.5rem;
     color: black;
 }
 
@@ -155,4 +157,8 @@ a {
 .links{
     display: flex;
     flex-wrap: nowrap;
+}
+
+.signup{
+    color: black;
 }
