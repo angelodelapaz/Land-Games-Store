@@ -109,9 +109,9 @@
                     %>
                 </div>
                 <div class="right">
-                    <h2>Games and Apps Summary</h3>
+                    <h2>Games and Apps Summary</h2>
                         <p class="left-title">Price</p><p class="right-title">$<%out.print(sum);%></p>
-                        <p class="left-title">Taxes</p><p class="right-title">Calculated at checkout</p>
+                        <p class="left-title">Items</p><p class="right-title"><%=items%>pcs</p> 
                         <hr class="line">
                         <p class="left-title">Subtotal</p><p class="right-title">$<%out.print(sum);%></p>
                         <form action="checkout.jsp">
