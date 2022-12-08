@@ -45,7 +45,7 @@ public class LogoutServlet extends HttpServlet {
             out.println("</html>");
              */
             HttpSession session = request.getSession();
-            session.removeAttribute("usename");
+            session.removeAttribute("username");
             session.invalidate();
 
             response.sendRedirect("index.jsp");
