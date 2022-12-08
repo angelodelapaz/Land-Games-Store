@@ -39,7 +39,7 @@
             </div>
             <div class="links">
                 <a href="LogoutServlet" class="logout">Logout</a>
-                <a href="" class="logout">MyCart</a>
+                <a href="cart.jsp" class="logout">MyCart</a>
             </div>
         </header>
         <main>
