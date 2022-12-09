@@ -61,6 +61,10 @@ main h1{
     text-align: center;
 }
 
+main h2 {
+    text-align: center;
+}
+
 .button {
     padding: 20px;
     margin: auto;
